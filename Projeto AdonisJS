@@ -1,0 +1,13 @@
+sudo apt update sudo apt-get install nodejs sudo apt-get install npm git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.3 sudo nano ~/.bashrc colar -> . $HOME/.asdf/asdf.sh . $HOME/.asdf/completions/asdf.bash
+
+sudo shutdown -r 0
+
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
+asdf install nodejs latest
+
+node -v
+
+npm init adonis-ts-app@latest hello-world
+
+ls
