@@ -1,0 +1,7 @@
+sudo apt update
+sudo apt upgrade
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
+sudo nano ~/.bashrc
+Add as linhas abaixo no final do arquivo ~/.bashrc 
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
