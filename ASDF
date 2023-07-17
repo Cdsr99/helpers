@@ -5,3 +5,9 @@ sudo nano ~/.bashrc
 Add as linhas abaixo no final do arquivo ~/.bashrc 
 . "$HOME/.asdf/asdf.sh"
 . "$HOME/.asdf/completions/asdf.bash"
+//Feche o terminal e abra novamente
+
+//Baixe o NodeJS
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+//Instale-o 
+asdf install nodejs latest
