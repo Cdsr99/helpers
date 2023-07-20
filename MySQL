@@ -1,0 +1,26 @@
+//Atualização dos Pacotes
+sudo apt update
+sudo apt upgrade
+
+//Instalando o MySQL
+sudo apt-get install mysql-server-8.0
+
+//Para configura o MySQL ser acessado de fora
+cd  /etc/mysql/mysql.conf.d/
+sudo nano mysqld.cnf
+//"#" - Comente a linha bind-address e a linha abaixo onde o mesmo vai estar 127.0.0.1 
+
+//Para criar um usuário no banco
+sudo mysql
+CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON * . * TO 'new_user'@'localhost';
+FLUSH PRIVILEGES;
+
+//Valide o Firewall
+sudo ufw status
+
+//Se estiver ativado basta validar a porta 3306
+sudo ufw status verbose 
+
+//Para liberar a porta
+sudo ufw allow 3306
