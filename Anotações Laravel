@@ -1,0 +1,9 @@
+//Livewere
+composer require livewire/livewire
+
+//JetStream - Pacote de Autenticação
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+php artisan jetstream:install inertia --no clue
+
+
