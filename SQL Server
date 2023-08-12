@@ -1,0 +1,18 @@
+sudo apt update
+sudo apt upgrade
+
+sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2022.list)"
+
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+
+sudo apt update
+
+sudo apt-get install mssql-server
+
+sudo /opt/mssql/bin/mssql-conf setup
+
+systemctl status mssql-server --no-pager
+
+
+sqlcmd -S localhost -U admin -P '@SkylineCdsr99'
+

@@ -1,2 +1,4 @@
 sudo apt-get install php8.1
 sudo apt-get install composer
+
+composer create-project laravel/laravel laravel_deploy
