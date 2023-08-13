@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- Windows
 //Acesse o site abaixo e faço o download do software
 https://docs.docker.com/desktop/install/windows-install/
@@ -50,3 +51,6 @@ docker-compose build   # Isso construirá a imagem do Docker
 docker-compose up      # Isso iniciará os contêineres
 
 composer install
+=======
+teste
+>>>>>>> 24ae72613ae5c39a117caafa59befcd104f8edbc
