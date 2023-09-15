@@ -1,56 +1,60 @@
-<<<<<<< HEAD
--- Windows
-//Acesse o site abaixo e faço o download do software
-https://docs.docker.com/desktop/install/windows-install/
+#Instalando o Docker no Ubuntu
+sudo apt update
+sudo apt upgrade
 
-//Para add o docker no seu projeto para na raiz do mesmo você criar os seguintes arquivos: Dockerfile e docker-compose.yml.
+#p.s favor atualizar o restante do passo a passo
 
-//Adicionando os seguintes codígos:
--- Dockerfile
-# Use a imagem oficial do PHP como base
-FROM php:7.4-fpm
+#Dentro do seu projeto crie um arquivo com o nome "Dockerfile" e dentro do mesmo insira as seguintes informações
 
-# Diretório de trabalho dentro do contêiner
-WORKDIR /var/www/html
-
-# Instale as extensões do PHP necessárias
-RUN docker-php-ext-install pdo pdo_mysql
-
-# Copie os arquivos do projeto Laravel para o contêiner
+FROM node:20
+WORKDIR /adonis_docker
 COPY . .
+RUN npm i
+ENTRYPOINT node ace serve --watch 
 
-# Instale as dependências do Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN composer install
 
-# Exponha a porta 9000 para o servidor web
-EXPOSE 9000
+#FROM seria o comando para buscar uma imagem já criada no Docker Hub, após os ":" seria a sua versão
+#WORKDIR informa qual é o diretorio principal ou o diretorio raiz do docker
+#COPY . . informa que os arquivos do diretorio atual devem ser copiados para o diretorio principal no docker (caminho setado no WORKDIR)
+#RUN e ENTRYPOINT são comandos de execução
 
-# Comando para iniciar o servidor PHP
-CMD ["php-fpm"]
+#Após criar o arquivo, basta roda o seguinte comando para criar a imagem
+docker builder -t caiorodrigues/adonis-docker:1 .
 
-----------------------------------------------------------------
--- docker-compose.yml
+/*
+Onde o caiorodrigues/adonis-docker seria o nome da imagem, isso poderia se chamar de qualquer outro nome.
+após os : (dois pontos) seria a versão da imagem do seu docker
+e o "." você estaria informando onde o mesmo deverá rodar
+/**/
 
-version: '3'
-services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: laravel-app
-    ports:
-      - "8000:9000"
-    volumes:
-      - .:/var/www/html
+#Após criar a sua imagem execute o seguinte comando para validar o mesmo
+docker images
 
------------------------------------------------------------------
+#E para executar o docker basta rodar o seguinte comando
+docker run -d -p 80:3333 caiorodrigues/adonis-docker:1
 
-//Abra um terminal, navegue até o diretório do seu projeto Laravel e execute os seguintes comandos:
-docker-compose build   # Isso construirá a imagem do Docker
-docker-compose up      # Isso iniciará os contêineres
 
-composer install
-=======
-teste
->>>>>>> 24ae72613ae5c39a117caafa59befcd104f8edbc
+
+#Para parar todos os dockers você pode usar o seguinte comando
+docker stop $(docker container ls -q)
+
+#onde:
+#"-q" você está informando que é para puxar o ID da sista
+
+
+#Para publicar o seu container no Docker Hub, o primeiro passo será logar na sua conta.
+docker login -u <seu_login>
+
+#digite a sua senha
+
+#Após disso basta dar o seguinte comando
+docker push <nome_docker>:<versao>
+
+
+
+#Para remover os dockers criados
+docker container rm $(docker container ls -aq)
+
+#Para remover as imagens do docker
+docker rmi $(docker image ls -aq)  //uma opção seria add "--force"
+
