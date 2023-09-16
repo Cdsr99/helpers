@@ -58,3 +58,45 @@ docker container rm $(docker container ls -aq)
 #Para remover as imagens do docker
 docker rmi $(docker image ls -aq)  //uma opção seria add "--force"
 
+#Para criar um espaço de memoria na máquina, basta usar o seguinte comando
+docker run -it -v /home/<username>/Documents/<seu_diretorio>:<diretorio no docker> ubuntu bash
+
+/*
+Onde?
+-it: serve para roda de uma forma interagida, ou seja abre o terminal do docker
+-v: cria os espaços entre as maquinas (locahost e o docker)
+primeiro caminho até os ":" informa o local onde você deseja salvar os arquivos na sua máquina
+após os ":" seria onde você vai jogar os arquivos no docker, para os arquivos irem para sua maquina
+ubuntu: seria o container, poderia ser qualquer outro, como o nosso criado por exemplo, caiorodrigues2/adonis-docker
+bash: para entrar no terminal
+*/
+
+
+#criando volume de uma forma mais facil
+docker volume create meu-volume
+
+docker run -it -v meu-volume:<diretorio no docker> ubuntu bash
+
+#esse "meu-volume" fica alocado no seguinte caminho no seu host /var/lib/docker
+
+/*************************************************************************************************************/
+/*                                                                                                           */                                                                                                
+/*                                                                                                           */
+/*                    Network                                                                                */
+/*                                                                                                           */
+/*                                                                                                           */
+/*************************************************************************************************************/
+
+#Listando as networks
+docker network ls
+
+#Criando uma network
+docker network create richpay
+
+#criando containers na mesma rede
+docker run -d --network <nome_network> ubuntu  
+
+
+
+
+
