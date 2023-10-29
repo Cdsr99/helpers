@@ -1,0 +1,37 @@
+# Atualize o sistema
+sudo apt update && sudo apt upgrade -y
+
+# Baixe os seguintes pacotes:
+
+//Php
+sudo apt-get install php php-xml php-curl php-mysql -y
+
+//Composer 
+sudo apt-get install Composer
+
+//Apache2
+sudo apt-get install Apache2
+
+# Após a instalação, será necessario configurar o apache. Crie uma arquivo de configuração
+sudo nano /etc/apache2/sites-available/project.conf
+sudo nano /etc/apache2/sites-available/rodflix.conf
+
+# Segue exemplo do configuração
+<VirtualHost *:80>
+    ServerAdmin rodflix.com
+    DocumentRoot /home/ubuntu/rodflix_v2/public
+    ServerName rodflix.com
+
+    <Directory /home/ubuntu/rodflix_v2/public>
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+
+# Libere o arquivo 
+sudo a2ensite *nome do arquivo de configuração*
+
+# Libera para ser editado
+sudo a2enmode *nome do arquivo de configuração*
+

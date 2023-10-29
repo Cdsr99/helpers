@@ -12,8 +12,10 @@ sudo nano mysqld.cnf
 
 //Para criar um usuário no banco
 sudo mysql
-CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'password';
+CREATE USER 'new_user'@'%' IDENTIFIED BY 'password';
+CREATE USER 'rodflix'@'%' IDENTIFIED BY 'ad5sa86das6d54as5d4';
 GRANT ALL PRIVILEGES ON * . * TO 'new_user'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'rodflix'@'%';
 FLUSH PRIVILEGES;
 
 //Valide o Firewall

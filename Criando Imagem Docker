@@ -1,0 +1,10 @@
+FROM ubuntu
+COPY . .
+WORKDIR /var/www/html
+
+RUN apt update && apt upgrade -y
+
+RUN apt install apache2 -y 
+
+RUN service apache2 start
+

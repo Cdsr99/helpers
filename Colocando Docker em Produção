@@ -1,0 +1,27 @@
+# Esse processo o Docker foi instalado na AWS
+
+# 1º Passo atualizações de pacotes.
+sudo apt update && sudo apt upgrade -y
+
+# Próximo passo, baixar e instalar o Docker
+
+sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common -y
+
+* apt-transport-https – permite que o gerenciador de pacotes transfira os tiles e os dados através de https
+* ca-certificates – permite que o navegador da web e o sistema verifiquem certificados de segurança
+* curl – transfere dados
+* software-properties-common – adiciona scripts para gerenciar o software
+
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+sudo apt update
+
+sudo apt install docker
+sudo apt install docker.io
+
+# Agora com o Docker instalado, basta baixar seu projeto. 
+

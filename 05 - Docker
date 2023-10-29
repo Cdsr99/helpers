@@ -19,7 +19,7 @@ ENTRYPOINT node ace serve --watch
 #RUN e ENTRYPOINT são comandos de execução
 
 #Após criar o arquivo, basta roda o seguinte comando para criar a imagem
-docker builder -t caiorodrigues/adonis-docker:1 .
+docker build -t caiorodrigues/adonis-docker:1 .
 
 /*
 Onde o caiorodrigues/adonis-docker seria o nome da imagem, isso poderia se chamar de qualquer outro nome.
