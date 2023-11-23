@@ -14,7 +14,7 @@ No caminho abaixo segue a diretório que é renderizado pelo Nginx.<br>
 
 ## Exemplo de arquivo de configuração
 
-``
+´´
 server {
     listen 80;
 
@@ -23,4 +23,5 @@ server {
         
     }
 
-}``
+}
+´´
