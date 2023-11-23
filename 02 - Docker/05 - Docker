@@ -5,8 +5,6 @@ sudo apt upgrade
 #p.s favor atualizar o restante do passo a passo
 
 
-
-
 #Após criar a sua imagem execute o seguinte comando para validar o mesmo
 docker images
 
