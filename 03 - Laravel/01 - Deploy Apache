@@ -35,3 +35,16 @@ sudo a2ensite *nome do arquivo de configuração*
 # Libera para ser editado
 sudo a2enmode *nome do arquivo de configuração*
 
+
+
+sudo chown -R www-data:www-data /var/www/html/teste/storage
+sudo chmod -R 775 /var/www/html/teste/storage
+
+
+sudo chown -R www-data:www-data /var/www/html/teste/storage
+sudo chmod -R 775 /var/www/html/teste/storage
+
+
+
+sudo chown -R www-data:www-data /usr/share/nginx/html/teste/storage
+sudo chmod -R 775 /usr/share/nginx/html/teste/storage
