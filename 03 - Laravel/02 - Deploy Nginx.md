@@ -22,6 +22,20 @@ server {
         root /var/www/html/teste/public;
         
     }
+}
+``````
 
+## Configurando mensagem de erro
+
+``````
+server {
+    listen 80;
+
+    location / {
+        root /var/www/html/teste/public;
+        
+    }
+
+    error_page 404 400 401 /erro.html;
 }
 ``````
