@@ -1,16 +1,21 @@
-#Dentro do seu projeto crie um arquivo com o nome "Dockerfile" e dentro do mesmo insira as seguintes informações
-
-FROM node:20
-WORKDIR /adonis_docker
-COPY . .
-RUN npm i
-ENTRYPOINT node ace serve --watch 
+## In the root of your project, you create a Dockerfile, below there're some exemple to how create an image
 
 
-#FROM seria o comando para buscar uma imagem já criada no Docker Hub, após os ":" seria a sua versão
-#WORKDIR informa qual é o diretorio principal ou o diretorio raiz do docker
-#COPY . . informa que os arquivos do diretorio atual devem ser copiados para o diretorio principal no docker (caminho setado no WORKDIR)
-#RUN e ENTRYPOINT são comandos de execução
+* ``FROM node:20``
+* ``WORKDIR /adonis_docker``
+* ``COPY . .``
+* ``RUN npm i``
+* ``ENTRYPOINT node ace serve --watch`` 
+
+
+Where:
+
+* ``From`` => Its the image that is going to be use, in the exemplo above its node image.
+* ``WORKDIR`` => You are seeting the main root in the image that you are creating.
+* ``COPY`` => You're copying all the files to your image.
+* ``RUN`` => You're running some commands in the creation of the image
+* ``ENTRYPOINT`` => I'm still trying to figure out.
+
 
 #Após criar o arquivo, basta roda o seguinte comando para criar a imagem
 docker build -t caiorodrigues/adonis-docker:1 .
