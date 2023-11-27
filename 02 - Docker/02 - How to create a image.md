@@ -17,11 +17,10 @@ Where:
 * ``ENTRYPOINT`` => I'm still trying to figure out.
 
 
-#Após criar o arquivo, basta roda o seguinte comando para criar a imagem
-docker build -t caiorodrigues/adonis-docker:1 .
+## After seeting your image, you need to in fact create the image
+``docker build -t caiorodrigues/adonis-docker:1 .``
 
-/*
-Onde o caiorodrigues/adonis-docker seria o nome da imagem, isso poderia se chamar de qualquer outro nome.
-após os : (dois pontos) seria a versão da imagem do seu docker
-e o "." você estaria informando onde o mesmo deverá rodar
-/**/
+Where:
+
+* ``caiorodrigues/adonis-docker`` => Would be the name of the person/organization who made it and after the ``/`` is the nome of the image.
+* After ``:`` it the version of the image.
