@@ -6,7 +6,7 @@ sudo nano /etc/apt/sources.list
 
 <h2>Copy and paste</h2>
 
-/*
+
 deb http://archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
 deb-src http://archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
 
@@ -21,4 +21,3 @@ deb-src http://archive.ubuntu.com/ubuntu/ focal-backports main restricted univer
 
 deb http://archive.canonical.com/ubuntu focal partner
 deb-src http://archive.canonical.com/ubuntu focal partner
-*/
