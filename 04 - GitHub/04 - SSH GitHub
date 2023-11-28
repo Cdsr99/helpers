@@ -1,8 +1,0 @@
-ssh-keygen -t ed25519 -C "cdsr073@gmail.com"
-Enter
-Senha
-confirmação da senha
-ssh-add ~/.ssh/id_ed25519
-senha
-cat ~/.ssh/id_ed25519.pub
-Copiar e colar no Githut
