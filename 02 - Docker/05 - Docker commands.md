@@ -6,7 +6,7 @@
 * Checking the dockers that are running
 ``docker ps``
 
-* To exec some container, you can run: 
+* To execute some container, you can run: 
 ``docker run -d -p 80:3333 caiorodrigues/adonis-docker:1``
 
 Where: 
