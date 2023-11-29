@@ -1,5 +1,6 @@
 ## Set your virtual host
 
+/*
 <VirtualHost *:81>
     ServerAdmin rodflix.com
     DocumentRoot /var/www/html/project_name/public
@@ -10,3 +11,4 @@
         Require all granted
     </Directory>
 </VirtualHost>
+*/
