@@ -36,5 +36,5 @@ After that, you can try run composer again.
 ## Create a configuration's file
 `sudo nano /etc/apache2/sites-available/rodflix`
 
-Configure your file like this <a href="#/02 - Configurations file">click here</a>
+Configure your file like this <a href="https://github.com/Cdsr99/helpers/blob/main/05%20-%20Apache2/02%20-%20Configurations%20file.md">click here</a>
 

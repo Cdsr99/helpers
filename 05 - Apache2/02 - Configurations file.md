@@ -1,19 +1,12 @@
+## Set your virtual host
+
 <VirtualHost *:81>
     ServerAdmin rodflix.com
-    DocumentRoot /var/www/html/test/public
+    DocumentRoot /var/www/html/project_name/public
     ServerName rodflix.com
 
-    <Directory /var/www/html/test/public>
+    <Directory /var/www/html/project_name/public>
         AllowOverride All
         Require all granted
     </Directory>
 </VirtualHost>
-
-
-
-sudo chown -R www-data:www-data /var/www/html/rodflix_v2/storage
-sudo chmod -R 775 /var/www/html/rodflix_v2/storage
-
-
-sudo chown -R www-data:www-data /var/www/html/teste/storage
-sudo chmod -R 775 /var/www/html/teste/storage
