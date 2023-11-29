@@ -26,3 +26,15 @@
 If u don't have composer installed, run this:
 
 `sudo apt-get install composer`
+
+If you get any error, it may be php's packages/extesions, those may be these  
+
+`sudo apt-get install php-xml php-curl -y`
+
+After that, you can try run composer again.
+
+## Create a configuration's file
+`sudo nano /etc/apache2/sites-available/rodflix`
+
+Configure your file like this <a href="#/02 - Configurations file">click here</a>
+
