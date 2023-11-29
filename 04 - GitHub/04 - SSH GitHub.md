@@ -1,4 +1,4 @@
-## To create a github's ssh keym follow the below steps: 
+## To create an ssh key on github, just follow the following steps: 
 1) ``ssh-keygen -t ed25519 -C "cdsr073@gmail.com"``
 2) Press ``Enter``
 3) Create a password
