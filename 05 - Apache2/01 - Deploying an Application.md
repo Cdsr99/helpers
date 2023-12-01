@@ -38,3 +38,10 @@ After that, you can try run composer again.
 
 Configure your file like this <a href="https://github.com/Cdsr99/helpers/blob/main/05%20-%20Apache2/02%20-%20Configurations%20file.md">click here</a>
 
+Give permission to the file following the follow steps:
+`sudo a2ensite <configuration's file name>`
+`sudo a2ensite rodflix.conf`
+`sudo a2enmod rewrite`
+
+## Restart apache
+`sudo service apache2 restart`
