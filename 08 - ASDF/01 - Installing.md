@@ -1,5 +1,5 @@
 ## First of all update your system 
-`sudo apt updat` <br>
+`sudo apt update` <br>
 `sudo apt upgrade` <br>
 `git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0` <br>
 `sudo nano ~/.bashrc`<br>
@@ -19,4 +19,4 @@
 
 4) Install it
 
-`asdf install nodejs lates`
+`asdf install nodejs latest`
