@@ -6,6 +6,8 @@
 
 1) Open the file "~/.bashrc" and add in the last line: 
 
+`sudo nano ~/.bashrc`<br>
+
 `. "$HOME/.asdf/asdf.sh"` <br>
 `. "$HOME/.asdf/completions/asdf.bash"`
 
