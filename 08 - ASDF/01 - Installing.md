@@ -1,20 +1,20 @@
 ## First of all update your system 
-`sudo apt updat`
-`sudo apt upgrade`
-`git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0`
-`sudo nano ~/.bashrc`
+`sudo apt updat` <br>
+`sudo apt upgrade` <br>
+`git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0` <br>
+`sudo nano ~/.bashrc`<br>
 
-* Add as linhas abaixo no final do arquivo ~/.bashrc 
+1) Add as linhas abaixo no final do arquivo ~/.bashrc 
 
 `. "$HOME/.asdf/asdf.sh"`
 `. "$HOME/.asdf/completions/asdf.bash"`
 
-* Close yout terminal and then open again
+2) Close yout terminal and then open again
 
-1) Download the node latest version 
+3) Download the node latest version 
 
 `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`
 
-2) Install it
+4) Install it
 
 `asdf install nodejs lates`
