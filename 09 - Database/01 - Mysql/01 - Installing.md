@@ -14,7 +14,7 @@ sudo apt-get install mysql-server-8.0
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 
-Comment out '#' the bind-address line
+Change the bind-address line the '127.0.0.1' to '0.0.0.0'
 
 ## Create an User
 ```shell
