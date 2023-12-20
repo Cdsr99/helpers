@@ -1,34 +1,53 @@
-## Update the system's packege
+# Update the system's packege
 
 ```shell
 sudo apt update && sudo apt upgrade -y
-``
+```
 
 # Install Mysql Server
 ```shell
 sudo apt-get install mysql-server-8.0
-´´
+```
 
-# Set Mysql server to be able to access from outside
+# Set Mysql server to be able to access from outside of the server
 ```shell
-cd  /etc/mysql/mysql.conf.d/
-``
-sudo nano mysqld.cnf
-//"#" - Comente a linha bind-address e a linha abaixo onde o mesmo vai estar 127.0.0.1 
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+```
 
-//Para criar um usuário no banco
+Comment out '#' the bind-address line
+
+# Create an User
+```shell
 sudo mysql
 CREATE USER 'new_user'@'%' IDENTIFIED BY 'password';
-CREATE USER 'rodflix'@'%' IDENTIFIED BY 'ad5sa86das6d54as5d4';
+```
+Example
+
+```shell
+CREATE USER 'rodflix'@'%' IDENTIFIED BY 'ad5asdasd56412534156s5d4';
+```
+
+# Grant Permissions
+
+```shell
 GRANT ALL PRIVILEGES ON * . * TO 'new_user'@'localhost';
 GRANT ALL PRIVILEGES ON * . * TO 'rodflix'@'%';
 FLUSH PRIVILEGES;
+```
 
-//Valide o Firewall
+# Check the Firewall
+```shell
 sudo ufw status
+```
 
-//Se estiver ativado basta validar a porta 3306
+If its able, just make sure the port 3306 its enabled.
+
+```shell
 sudo ufw status verbose 
+```
 
-//Para liberar a porta
+Enable the port 3306.
+
+```shell
 sudo ufw allow 3306
+```
