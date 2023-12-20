@@ -1,6 +1,8 @@
 ## Update the system's packege
 
-``sudo apt update && sudo apt upgrade -y``
+``shell
+sudo apt update && sudo apt upgrade -y
+``
 
 ## Download Apache 2
 ``sudo apt-get install apache2``

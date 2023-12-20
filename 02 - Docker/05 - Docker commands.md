@@ -30,10 +30,10 @@ Where:
 
 
 
-#Para remover os dockers criados
+## Para remover os dockers criados
 docker container rm $(docker container ls -aq)
 
-#Para remover as imagens do docker
+## Para remover as imagens do docker
 docker rmi $(docker image ls -aq)  //uma opção seria add "--force"
 
 #Para criar um espaço de memoria na máquina, basta usar o seguinte comando
