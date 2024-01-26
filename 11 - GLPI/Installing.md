@@ -1,6 +1,6 @@
 ## First you need to update your system, run this comman below 
 ```shell
-sudo apt update & sudo apt upgrade -y``
+sudo apt update & sudo apt upgrade -y
 ```
 
 1) Then install php's packages
