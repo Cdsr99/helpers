@@ -1,11 +1,21 @@
+## Table 
+
+Here is the table and right below it is the code to it
+
+
+
+
+
+
+```shell
 <div>
     <center>
         <br>
-        <h2> Sicred - Users </h2>
+        <h2> Table - Users </h2>
         <br>
 
-        <a href="{{ route('sicred_create_user') }}" class="btn btn-primary">Create User</a>
-        <a href="{{route('sicred_create_profile')}}" class="btn btn-primary">Create Profile</a>
+        <a href="{{ route('#') }}" class="btn btn-primary">Create User</a>
+        <a href="{{route('#')}}" class="btn btn-primary">Create Profile</a>
     </center>
 
     <br><br>
@@ -27,10 +37,10 @@
                 <tr>
                     <td>CAIORODRIG</td>
                     <td>Caio da Silveira Rodrigues</td>
-                    <td>GESTACESSO</td>
+                    <td>Master</td>
                     <td>Ativo</td>
                     <td>
-                        <a href="/sicred/edit/user/CAIORODRIG" class="btn btn-success">Edit</a>
+                        <a href="#" class="btn btn-success">Edit</a>
                         <a href="" class="btn btn-success">Reset</a>
                     </td>
 
@@ -89,3 +99,4 @@
 
 
 </div>
+```
