@@ -1,16 +1,15 @@
 ## First you need to update your system, run this comman below 
-``sudo apt update & sudo apt upgrade -y``
+```shell
+sudo apt update & sudo apt upgrade -y``
+```
 
 1) Then install php's packages
 ```shell
-sudo apt-get install php8.1 php8.1-mysql  php8.1-xml
+sudo apt-get install libapache2-mod-php8.1 php8.1-cli php8.1 php8.1-gd php8.1-imap php8.1-ldap php8.1-mysql php-soap php8.1-xmlrpc zip unzip bzip2 unrar-free php8.1-snmp php8.1-curl php-curl curl php-intl php8.1 php8.1-mysql  php8.1-xml -y
 ```
 2) Give permission
 ```shell
 sudo chmod 777 /var/www/html/glpi/*
-````
-```shell
-sudo apt-get install libapache2-mod-php8.1 php8.1-cli php8.1 php8.1-gd php8.1-imap php8.1-ldap php8.1-mysql php-soap php8.1-xmlrpc zip unzip bzip2 unrar-free php8.1-snmp php8.1-curl php-curl curl php-intl -y
 ```
 
 3) Install MySQL
