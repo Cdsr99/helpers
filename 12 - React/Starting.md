@@ -13,3 +13,9 @@ Then create the project, running:
 ```shell
 npx create-react-app my-react-app
 ```
+
+Start the project 
+```shell
+cd my-react-app
+npm start
+```
