@@ -25,3 +25,7 @@ git branch -M main
 ```shell
 git push -u origin main
 ```
+
+```shell
+git remote remove origin
+```
