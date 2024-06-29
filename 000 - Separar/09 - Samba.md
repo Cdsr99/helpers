@@ -1,5 +1,9 @@
+```shell
 sudo apt update
+```
+```shell
 sudo apt upgrade
+```
 
 sudo apt-get install samba
 
