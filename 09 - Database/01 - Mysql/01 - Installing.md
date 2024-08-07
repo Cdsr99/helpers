@@ -24,14 +24,14 @@ CREATE USER 'new_user'@'%' IDENTIFIED BY 'password';
 Example
 
 ```shell
-CREATE USER 'rodflix'@'%' IDENTIFIED BY 'ad5asdasd56412534156s5d4';
+CREATE USER 'admin_petrofisa'@'%' IDENTIFIED BY 'ad5asdasd56412534156s5d4';
 ```
 
 ## Grant Permissions
 
 ```shell
 GRANT ALL PRIVILEGES ON * . * TO 'new_user'@'localhost';
-GRANT ALL PRIVILEGES ON * . * TO 'rodflix'@'%';
+GRANT ALL PRIVILEGES ON * . * TO 'admin_petrofisa'@'%';
 FLUSH PRIVILEGES;
 ```
 
