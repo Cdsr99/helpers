@@ -9,7 +9,12 @@ Run the following command in your terminal to generate a new SSH key using the E
 ```bash
 ssh-keygen -t ed25519 -C "cdsr073@gmail.com"
 ````
-````bash
+```bash
 ssh-add ~/.ssh/id_ed25519
-```
+````
+```bash
+cat ~/.ssh/id_ed25519.pub
+`````
+
+
 
