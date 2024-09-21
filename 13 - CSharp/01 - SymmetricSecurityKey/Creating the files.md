@@ -9,5 +9,5 @@ dotnet user-secrets init
 ```
 
 ```shell
-dotnet user-secrets set "SymmetricSecurityKey" "9ASHDA98H9ah9ha9H9A89n0f"
+dotnet user-secrets set "SymmetricSecurityKey" "9ASHDA98H9ah9ha9H9A89n0fas69d5sad5asdasdsd"
 ```
